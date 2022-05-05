@@ -1,0 +1,60 @@
+.about {
+    .about_container {
+        row-gap: 6rem;
+    }
+
+    .about_group {
+        position: relative;
+    }
+
+    .about_img {
+        margin: 0 auto;
+        width: 31rem;
+        border-radius: 0.5rem;
+    }
+
+    .about_card {
+        padding: 1rem 0.75rem;
+        position: absolute;
+        bottom: -2.5rem;
+        right: 2rem;
+        width: 180px;
+        border-radius: 1.25rem;
+        text-align: center;
+        background: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(15px);
+    }
+
+    .about_cardTitle {
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .about_cardDescription {
+        font-size: $fontSmaller;
+    }
+
+    .about_title {
+        margin-bottom: 2rem;
+        text-align: initial;
+    }
+
+    .about_description {
+        margin-bottom: 2rem;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .about {
+        .about_cardTitle {
+            font-size: 1rem;
+        }
+
+        .about_cardDescription {
+            font-size: $fontSmallerMobile;
+        }
+    }
+}

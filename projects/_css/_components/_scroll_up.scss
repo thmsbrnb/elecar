@@ -1,0 +1,22 @@
+.scroll_up {
+    z-index: 100;
+    padding: 0.45rem;
+    position: fixed;
+    bottom: -30%;
+    right: 1rem;
+    display: inline-flex;
+    border-radius: 0.5rem;
+    font-size: 1.15rem;
+    color: $whiteColor;
+    background: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(15px);
+    transition-duration: $time2;
+
+    &.is-active {
+        bottom: 3rem;
+    }
+
+    &:hover {
+        transform: translateY(-0.25rem);
+    }
+}

@@ -1,0 +1,96 @@
+.popular {
+    .popular_container {
+        padding: 1rem 0 0 0.4rem;
+    }
+
+    .popular_card {
+        margin-bottom: 3.5rem;
+        padding: 2rem 1.5rem 1.5rem;
+        position: relative;
+        width: 23.8rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: $containerColor;
+
+        &:hover {
+            .popular_img {
+                transform: translateY(-0.25rem);
+            }
+        }
+
+        .shape--smaller {
+            position: absolute;
+            top: -2.5rem;
+            left: -2.5rem;
+        }
+    }
+
+    .popular_title,
+    .popular_subtitle,
+    .popular_img {
+        position: relative;
+    }
+
+    .popular_title {
+        margin-bottom: 0.25rem;
+    }
+
+    .popular_subtitle {
+        font-size: $fontNormal;
+    }
+
+    .popular_img {
+        margin: 0.75rem 0 1.25rem 1.25rem;
+        width: 16rem;
+        transition-duration: $time1;
+    }
+
+    .popular_data {
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 0.5rem 1.25rem;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .popular_dataGroup {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        font-size: $fontSmaller;
+        color: $whiteColor;
+    }
+
+    .popular_button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 0.75rem 1rem 0.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 1rem 0 1rem 0;
+
+        i {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .popular {
+        .popular_subtitle {
+            font-size: $fontNormalMobile;
+        }
+
+        .popular_dataGroup {
+            font-size: $fontSmallerMobile;
+        }
+    }
+}

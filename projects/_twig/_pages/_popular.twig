@@ -1,0 +1,133 @@
+{% set data_items = [
+    {
+        "img": "../../assets/img/popular1.png",
+        "title": "Porsche",
+        "subtitle": "Turbo S",
+        "price": "$175.900",
+        "data": [
+            {
+                "icon": "ri-dashboard-3-line",
+                "label": "3.7 Sec"
+            },
+            {
+                "icon": "ri-funds-box-line",
+                "label": "356 Km/h"
+            },
+            {
+                "icon": "ri-charging-pile-2-line",
+                "label": "Electric" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular2.png",
+        "title": "Porsche",
+        "subtitle": "Taycan",
+        "price": "$114.900",
+        "data": [
+            {
+                "icon": "ri-dashboard-3-line",
+                "label": "3.7 Sec"
+            },
+            {
+                "icon": "ri-funds-box-line",
+                "label": "356 Km/h"
+            },
+            {
+                "icon": "ri-charging-pile-2-line",
+                "label": "Electric" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular3.png",
+        "title": "Porsche",
+        "subtitle": "Turbo S Cross",
+        "price": "$150.900",
+        "data": [
+            {
+                "icon": "ri-dashboard-3-line",
+                "label": "3.7 Sec"
+            },
+            {
+                "icon": "ri-funds-box-line",
+                "label": "356 Km/h"
+            },
+            {
+                "icon": "ri-charging-pile-2-line",
+                "label": "Electric" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular4.png",
+        "title": "Porsche",
+        "subtitle": "Boxter 718",
+        "price": "$125.900",
+        "data": [
+            {
+                "icon": "ri-dashboard-3-line",
+                "label": "3.7 Sec"
+            },
+            {
+                "icon": "ri-funds-box-line",
+                "label": "356 Km/h"
+            },
+            {
+                "icon": "ri-charging-pile-2-line",
+                "label": "Electric" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular5.png",
+        "title": "Porsche",
+        "subtitle": "Cayman",
+        "price": "$128.900",
+        "data": [
+            {
+                "icon": "ri-dashboard-3-line",
+                "label": "3.7 Sec"
+            },
+            {
+                "icon": "ri-funds-box-line",
+                "label": "356 Km/h"
+            },
+            {
+                "icon": "ri-charging-pile-2-line",
+                "label": "Electric" 
+            }
+        ]
+    }
+] %}
+
+<section class="section popular" id="popular">
+    <h2 class="section_title">
+        Choose Your Electric Car<br>Of The Porsche Brand
+    </h2>
+    <div class="popular_container container swiper">
+        <div class="swiper-wrapper">
+            {% for item in data_items %}
+                <article class="popular_card swiper-slide">
+                    <div class="shape shape--smaller"></div>
+                    <h2 class="popular_title">{{ item.title }}</h2>
+                    <h3 class="popular_subtitle">{{ item.subtitle }}</h3>
+                    <img src="{{ item.img }}" alt="" class="popular_img">
+                    <div class="popular_data">
+                        {% for data in item.data %}
+                            <div class="popular_dataGroup">
+                                <i class="{{ data.icon }}"></i>
+                                {{ data.label }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <h3 class="popular_price">{{ item.price }}</h3>
+                    <button class="button popular_button">
+                        <i class="ri-shopping-bag-2-line"></i>
+                    </button>
+                </article>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>

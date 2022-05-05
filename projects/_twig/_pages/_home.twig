@@ -1,0 +1,52 @@
+{% set data_items = [
+    {
+        "icon": "ri-temp-cold-line",
+        "value": "24°F",
+        "label": "TEMPERATURE"
+    },
+    {
+        "icon": "ri-dashboard-3-line",
+        "value": "873",
+        "label": "MILEAGE"
+    },
+    {
+        "icon": "ri-flashlight-fill",
+        "value": "94%",
+        "label": "BATTERY"
+    }
+] %}
+
+<section class="home section" id="section">
+    <div class="shape shape--big"></div>
+    <div class="shape shape--small"></div>
+    <div class="home_container container grid">
+        <div class="home_data">
+            <h1 class="home_title">
+                Choose The Best Car
+            </h1>
+            <h2 class="home_subtitle">
+                Porsche Mission E
+            </h2>
+            <h3 class="home_elec">
+                <i class="ri-flashlight-fill"></i> Electric Car
+            </h3>
+        </div>
+        <img src="../../assets/img/home.png" alt="" class="home_img">
+        <div class="home_car">
+            {% for item in data_items %}
+                <div class="home_carData">
+                    <div class="home_carIcon">
+                        <i class="{{ item.icon ? item.icon : '' }}"></i>
+                    </div>
+                    <h2 class="home_carNumber">
+                        {{ item.value ? item.value : '' }}
+                    </h2>
+                    <h3 class="home_carName">
+                        {{ item.label ? item.label : '' }}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="#" class="home_button">START</a>
+    </div>
+</section>

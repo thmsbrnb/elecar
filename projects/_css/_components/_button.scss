@@ -1,0 +1,22 @@
+.button {
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    font-size: $fontNormal;
+    color: $whiteColor;
+    background: $primaryColor;
+    transition-duration: $time1;
+
+    &:hover {
+        background: $primaryAltColor;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .button {
+        font-size: $fontNormalMobile;
+    }
+}

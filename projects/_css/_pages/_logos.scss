@@ -1,0 +1,19 @@
+.logos {
+    .logos_img {
+        width: 40px;
+        opacity: 0.4;
+        transition-duration: $time1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .logos_container {
+        padding-bottom: 2rem;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+}

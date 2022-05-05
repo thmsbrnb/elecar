@@ -1,0 +1,30 @@
+{% set logos_items = [
+    {
+        "img": "../../assets/img/logo1.png"
+    },
+    {
+        "img": "../../assets/img/logo2.png"
+    },
+    {
+        "img": "../../assets/img/logo3.png"
+    },
+    {
+        "img": "../../assets/img/logo4.png"
+    },
+    {
+        "img": "../../assets/img/logo5.png"
+    },
+    {
+        "img": "../../assets/img/logo6.png"
+    }
+] %}
+
+<section class="section logos" id="logos">
+    <div class="logos_container container grid">
+        {% for item in logos_items %}
+            <div class="logos_content">
+                <img src="{{ item.img }}" alt="" class="logos_img">
+            </div>
+        {% endfor %}
+    </div>
+</section>

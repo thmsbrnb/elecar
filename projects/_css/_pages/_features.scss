@@ -1,0 +1,76 @@
+.features {
+    position: relative;
+    overflow: hidden;
+
+    .features_container {
+        padding-top: 2rem;
+        grid-template-columns: 285px;
+        justify-content: center;
+    }
+
+    .features_group {
+        z-index: 10;
+        position: relative;
+        display: grid;
+    }
+
+    .features_img {
+        width: 150px;
+        justify-self: center;
+    }
+
+    .features_card {
+        padding: 0.75rem 2rem;
+        position: absolute;
+        width: 112px;
+        border-radius: 1.25rem;
+        text-align: center;
+        color: $titleColor;
+        background: hsla(0, 0%, 100%, 0.075);
+        backdrop-filter: blur(16px);
+
+        &--1 {
+            top: 4rem;
+            left: 1.5rem;
+        }
+
+        &--2 {
+            top: 8rem;
+            right: 1rem;
+        }
+
+        &--3 {
+            left: 1.5rem;
+            bottom: 2rem;
+        }
+    }
+
+    .features_cardTitle {
+        margin-bottom: 0.25rem;
+    }
+
+    .features_cardDescription {
+        font-size: $fontSmaller;
+    }
+
+    .features_map {
+        margin: auto;
+        position: absolute;
+        top: 8rem;
+        left: calc(50% + 1rem);
+        max-width: initial;
+        width: 450px;
+        transform: translateX(-50%) rotate(-22deg);
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .features {
+        .features_cardDescription {
+            font-size: $fontSmallerMobile;
+        }
+    }
+}

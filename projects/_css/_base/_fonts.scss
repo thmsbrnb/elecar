@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+@mixin font-primary {
+    font-family: "Exo", sans-serif;
+}
+
+// Weight
+// ----------------------------------------
+@mixin font-semi-bold {
+    font-weight: 600;
+}
+@mixin font-medium {
+    font-weight: 500;
+}
+@mixin font-regular {
+    font-weight: 400;
+}
+
+// Rules
+// ----------------------------------------
+$fontNormalMobile: 0.938rem;
+$fontNormal: 1rem;
+$fontSmallMobile: 0.813rem;
+$fontSmall: 0.875rem;
+$fontSmallerMobile: 0.75rem;
+$fontSmaller: 0.813rem;
+
+body {
+    letter-spacing: 0.02rem;
+    font-size: $fontNormal;
+    @include font-primary;
+    @include font-medium;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    @include font-semi-bold;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+// Responsive
+// ----------------------------------------
+@include smallDesktop {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: $fontNormalMobile;
+    }
+}

@@ -1,0 +1,94 @@
+.nav {
+    height: $navHeight;
+    @include flex-between-center;
+
+    .nav_logo,
+    .nav_toggle {
+        display: inline-flex;
+        color: $titleColor;
+    }
+
+    .nav_logo {
+        align-items: center;
+        column-gap: 0.25rem;
+        transition-duration: $time1;
+        @include font-medium;
+
+        i {
+            margin-bottom: 0.1rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .nav_toggle {
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+
+    .list {
+        padding-top: 9rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        text-align: center;
+    }
+
+    .list_itemLink {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        color: $titleColor;
+        transition-duration: $time1;
+        @include font-medium;
+
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+
+    .nav_close {
+        cursor: pointer;
+        position: absolute;
+        top: 0.75rem;
+        right: 1.1rem;
+        font-size: 2rem;
+        color: $whiteColor;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 720px
+@include hover {
+    .nav {
+        .nav_logo,
+        .list_itemLink {
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+// Devices < 720px
+@include largeTablet {
+    .nav {
+        .nav_menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: hsla(0, 0%, 100%, 0.1);
+            backdrop-filter: blur(100px);
+            transition-duration: $time2;
+
+            &.is-active {
+                right: 0;
+            }
+        }
+
+        .list_itemLink {
+            font-size: 1.5rem;
+        }
+    }
+}

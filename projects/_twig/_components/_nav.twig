@@ -1,0 +1,41 @@
+{% set nav_items = [
+    {
+        "label": "Home",
+        "path": "home",
+        "css_class": 'active-link'
+    },
+    {
+        "label": "About",
+        "path": "about"
+    },
+    {
+        "label": "Popular",
+        "path": "popular"
+    },
+    {
+        "label": "Featured",
+        "path": "featured"
+    }
+] %}
+
+<nav class="nav container" arial-label="main">
+    <a href="#" class="nav_logo">
+        <i class="ri-steering-line"></i>
+        Elecar
+    </a>
+    <div class="nav_menu" id="nav-menu">
+        <ul class="list">
+            {% for item in nav_items %}
+                <li class="list_item">
+                    <a href="{{ item.path ? '#' ~ item.path : '' }}" class="list_itemLink nav_trigger{{ item.css_class ? ' ' ~ item.css_class : '' }}" title="{{ item.label }}">{{ item.label }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="nav_close nav_trigger{{ item.css_class ? ' ' ~ item.css_class : '' }}" id="nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+    <div class="nav_toggle nav_trigger{{ item.css_class ? ' ' ~ item.css_class : '' }}" id="nav-toggle">
+        <i class="ri-menu-line"></i> 
+    </div>
+</nav>

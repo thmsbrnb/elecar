@@ -1,0 +1,37 @@
+{% set app_name = 'Elecar' %}
+{% set app_title = (meta_title ? app_name ~ ' | ' ~ meta_title : '') %}
+
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>{{ app_title }}</title>
+
+		<link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+
+		{% block styles %}
+			<link rel="stylesheet" href="../../build/styles.min.css" media="screen"/>
+			<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		{% endblock styles %}
+
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="../../projects/_js/_mixitup.js"></script>
+		<script src="../../projects/_js/_menu.js"></script>
+		<script src="../../projects/_js/_header.js"></script>
+		<script src="../../projects/_js/_swiper.js" ></script>
+		<script src="../../projects/_js/_scroll_up.js" ></script>
+		<script src="../../projects/_js/_scroll_reveal.js" ></script>
+
+	</head>
+
+	<body {{ body_classes ? 'class="' ~ body_classes ~ '"' }}>
+		{% block body '' %}
+		{% block extra_javascripts '' %}
+	</body>
+
+</html>

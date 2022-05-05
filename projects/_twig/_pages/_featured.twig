@@ -1,0 +1,93 @@
+{% set filter_items = [
+    {
+        "label": "All",
+        "data": "all",
+        "is_active": true
+    },
+    {
+        "has_img": true,
+        "img": "../../assets/img/logo3.png",
+        "data": ".tesla"
+    },
+    {
+        "has_img": true,
+        "img": "../../assets/img/logo2.png",
+        "data": ".audi"
+    },
+    {
+        "has_img": true,
+        "img": "../../assets/img/logo1.png",
+        "data": ".porsche"
+    }
+] %}
+
+{% set card_items = [
+    {
+        "img": "../../assets/img/featured1.png",
+        "title": "Tesla",
+        "subtitle": "Model X",
+        "price": "$98.900",
+        "data": "tesla"
+    },
+    {
+        "img": "../../assets/img/featured2.png",
+        "title": "Tesla",
+        "subtitle": "Model 3",
+        "price": "$45.900",
+        "data": "tesla"
+    },
+    {
+        "img": "../../assets/img/featured3.png",
+        "title": "Audi",
+        "subtitle": "E-tron",
+        "price": "$175.900",
+        "data": "audi"
+    },
+    {
+        "img": "../../assets/img/featured4.png",
+        "title": "Porsche",
+        "subtitle": "Boxter 987",
+        "price": "$126.900",
+        "data": "porsche"
+    },
+    {
+        "img": "../../assets/img/featured5.png",
+        "title": "Porsche",
+        "subtitle": "Panamera",
+        "price": "$126.900",
+        "data": "porsche"
+    }
+] %}
+
+<section class="section featured" id="featured">
+    <h2 class="section_title">
+        Featured Luxury Cars
+    </h2>
+    <div class="featured_container container">
+        <ul class="featured_filters">
+            {% for item in filter_items %}
+                <li class="featured_item{{ item.is_active ? ' is-active' : '' }}" data-filter="{{ item.data }}">
+                    {% if not item.has_img %}
+                        <span>{{ item.label }}</span>
+                    {% else %}
+                        <img src="{{ item.img }}" alt="">
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="featured_content grid">
+            {% for item in card_items %}
+                <article class="featured_card mix{{ item.data ? ' ' ~ item.data : '' }}"> 
+                    <div class="shape shape--smaller"></div>
+                    <h2 class="featured_title">{{ item.title }}</h2>
+                    <h3 class="featured_subtitle">{{ item.subtitle }}</h3>
+                    <img src="{{ item.img }}" alt="" class="featured_img">
+                    <h3 class="featured_price">{{ item.price }}</h3>
+                    <button class="featured_button button">
+                        <i class="ri-shopping-bag-2-line"></i>
+                    </button>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

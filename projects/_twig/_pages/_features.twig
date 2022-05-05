@@ -1,0 +1,35 @@
+{% set features_items = [
+    {
+        "number": "1",
+        "title": "800v",
+        "info": "Turbo<br>Chargin"
+    },
+    {
+        "number": "2",
+        "title": "350",
+        "info": "Km<br>Range"
+    },
+    {
+        "number": "3",
+        "title": "480",
+        "info": "Km<br>Travel"
+    }
+] %}
+
+<section class="section features">
+    <h2 class="section_title">
+        More Features
+    </h2>
+    <div class="features_container container grid">
+        <div class="features_group">
+            <img src="../../assets/img/features.png" alt="" class="features_img">
+            {% for item in features_items %}
+                <article class="features_card{{ item.number ? ' features_card--' ~ item.number : '' }}">
+                    <h3 class="features_cardTitle">{{ item.title }}</h3>
+                    <p class="features_cardDescription">{{ item.info }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+    <img src="../../assets/img/map.svg" alt="" class="features_map">
+</section>

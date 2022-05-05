@@ -1,0 +1,14 @@
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition-duration: $time1;
+
+    &.is-active {
+        border-radius: 0 0 1rem 1rem;
+        background: $bodyColor;
+    }
+}

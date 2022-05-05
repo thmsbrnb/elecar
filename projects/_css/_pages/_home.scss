@@ -1,0 +1,144 @@
+.home {
+    position: relative;
+    overflow: hidden;
+
+    .home_container {
+        padding: 4rem 0 4.5rem;
+        position: relative;
+    }
+
+    .home_data {
+        text-align: center;
+    }
+
+    .home_title {
+        margin-bottom: 1rem;
+    }
+
+    .home_subtitle {
+        margin-bottom: 0.25rem;
+        font-size: 1.25rem;
+    }
+
+    .home_elec {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.25rem;
+        font-size: $fontSmaller;
+        color: $textColor;
+        @include font-regular;
+
+        i {
+            color: $primaryColor;
+        }
+    }
+
+    .home_img {
+        margin: 3rem 0;
+        width: 28rem;
+        justify-self: center;
+    }
+
+    .home_car {
+        margin-bottom: 4rem;
+        column-gap: 4rem;
+        @include flex-center-center;
+    }
+
+    .home_carName {
+        font-size: 0.625rem;
+        color: $textColorLight;
+        @include font-regular;
+    }
+
+    .home_carData {
+        text-align: center;
+    }
+
+    .home_carNumber {
+        margin-bottom: 0.25rem;
+        font-size: 1.5rem;
+        @include font-medium;
+    }
+
+    .home_carIcon {
+        margin-bottom: 0.75rem;
+        padding: 0.376rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 0.875rem;
+        background: $containerColor;
+    }
+
+    .home_button {
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+        border: 0.2rem solid hsla(158, 89%, 30%, 0.5);
+        border-radius: 50%;
+        justify-self: center;
+        font-size: $fontSmall;
+        color: $whiteColor;
+        @include flex-center-center;
+        @include font-medium;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 9rem;
+            height: 9rem;
+            border: 0.2rem solid hsl(158, 98%, 43%);
+            border-radius: 50%;
+            box-shadow: 0 0 0.6rem hsl(158, 98%, 43%);
+            transition-duration: $time1;
+            animation: pulse 3s infinite;
+        }
+    }
+
+    .shape {
+        position: absolute;
+
+        &--big {
+            top: -16rem;
+            left: -18rem;
+        }
+
+        &--small {
+            bottom: -5rem;
+            right: -18rem;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0.6rem hsl(158, 98%, 43%);
+    }
+    50% {
+        box-shadow: 0 0 2.4rem hsl(158, 98%, 43%);
+    }
+}
+
+// Responsive
+// ----------------------------------------
+@include smallDesktop {
+    .home {
+        .home_subtitle {
+            font-size: 1rem;
+        }
+
+        .home_elec {
+            font-size: $fontSmallerMobile;
+        }
+
+        .home_carNumber {
+            font-size: 1.25rem;
+        }
+
+        .home_button {
+            font-size: $fontSmallMobile;
+        }
+    }
+}

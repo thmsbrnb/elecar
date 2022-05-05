@@ -1,0 +1,96 @@
+{% set footer_items = [
+    {
+        "css_class": "footer_links",
+        "title": "Company",
+        "data" : [
+            {
+                "label": "About"
+            },
+            {
+                "label": "Cars"
+            },
+            {
+                "label": "History"
+            },
+            {
+                "label": "Shop"
+            }
+        ] 
+    },
+    {
+        "css_class": "footer_links",
+        "title": "Information",
+        "data" : [
+            {
+                "label": "Request a note"
+            },
+            {
+                "label": "Find a dealer"
+            },
+            {
+                "label": "Contact us"
+            },
+            {
+                "label": "Services"
+            }
+        ] 
+    },
+    {
+        "css_class": "footer_socials",
+        "socials": true,
+        "title": "Follow us",
+        "data" : [
+            {
+                "icon": "ri-facebook-fill",
+                "path": "http://www.facebook.com"
+            },
+            {
+                "icon": "ri-instagram-line",
+                "path": "http://www.instagram.com"
+            },
+            {
+                "icon": "ri-twitter-line",
+                "path": "http://www.twitter.com"
+            }
+        ] 
+    },
+] %}
+
+<footer class="footer section">
+    <div class="shape shape--big"></div>
+    <div class="shape shape--small"></div>
+    <div class="footer_container container grid">
+        <div class="footer_content">
+            <a href="#!" class="footer_logo">
+                <i class="ri-steering-line"></i>
+                Elecar
+            </a>
+            <p class="footer_description">
+                We offer the best electric cars of<br>
+                the most recognized brands in<br>
+                the world.
+            </p>
+        </div>
+        {% for item in footer_items %}
+            <div class="footer_content">
+                <h3 class="footer_title">{{ item.title }}</h3>
+                <ul class="{{ item.css_class }}">
+                    {% for i in item.data %}
+                        {% if item.socials %}
+                            <a href="{{ i.path }}" class="footer_socialLink" target="_blank">
+                                <i class="{{ i.icon }}"></i>
+                            </a>
+                        {% else %}
+                            <li>
+                                <a href="#!" class="footer_link">{{ i.label }}</a>
+                            </li>    
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+    <span class="footer_copy">
+        &#169 Elecar. All Rights Reserved
+    </span>
+</footer>

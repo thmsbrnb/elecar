@@ -1,0 +1,52 @@
+.main {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding: 4.5rem 0 2rem;
+
+    .section_title {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+}
+
+.shape {
+    border-radius: 50%;
+    filter: blur(112px);
+    background: hsl(219, 33%, 32%, 0.5);
+
+    &--big {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    &--small {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    &--smaller {
+        width: 18rem;
+        height: 18rem;
+        filter: blur(6.4rem);
+    }
+}
+
+// Responsive
+// ----------------------------------------
+@include smallDesktop {
+    .container {
+        margin: 0 1.5rem 0 1.5rem;
+    }
+}

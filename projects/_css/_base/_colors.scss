@@ -1,0 +1,21 @@
+$primaryColor: #4178dc;
+$primaryAltColor: #306bd9;
+$titleColor: #f1f2f3;
+$textColor: #babec4;
+$textColorLight: #888b91;
+$whiteColor: #fff;
+$bodyColor: #0a0a0b;
+$containerColor: #111213;
+
+body {
+    color: $textColor;
+    background: $bodyColor;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: $titleColor;
+}

@@ -1,0 +1,105 @@
+.footer {
+    position: relative;
+    overflow: hidden;
+
+    .shape--big,
+    .shape--small {
+        position: absolute;
+    }
+
+    .shape {
+        &--big {
+            width: 300px;
+            height: 300px;
+            top: 6rem;
+            left: -12rem;
+        }
+
+        &--small {
+            bottom: -6rem;
+            right: -13rem;
+        }
+    }
+
+    .footer_container {
+        position: relative;
+        row-gap: 2.5rem;
+    }
+
+    .footer_logo {
+        margin-bottom: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.25rem;
+        font-size: 1.5rem;
+        color: $titleColor;
+        transition-duration: $time1;
+        @include font-semi-bold;
+
+        &:hover {
+            color: $primaryColor;
+        }
+
+        i {
+            margin-bottom: 0.1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .footer_title {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+    }
+
+    .footer_links {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .footer_link,
+    .footer_socialLink {
+        color: $textColor;
+        transition-duration: $time1;
+
+        &:hover {
+            color: $titleColor;
+        }
+    }
+
+    .footer_socials {
+        display: flex;
+        column-gap: 1.5rem;
+    }
+
+    .footer_socialLink {
+        font-size: 1.25rem;
+    }
+
+    .footer_copy {
+        margin-top: 4.5rem;
+        display: block;
+        text-align: center;
+        font-size: $fontSmaller;
+        color: $textColor;
+    }
+}
+
+// Reponsive
+// ----------------------------------------
+@include smallDesktop {
+    .footer {
+        .footer_logo {
+            font-size: 1.25rem;
+        }
+    }
+
+    .footer_title {
+        font-size: 1rem;
+    }
+
+    .footer_copy {
+        font-size: $fontSmallerMobile;
+    }
+}

@@ -1,0 +1,309 @@
+@media screen and (max-width: 320px) {
+    .container {
+        margin: 0 1rem 0 1rem;
+    }
+
+    .home {
+        .home_car {
+            column-gap: 2rem;
+        }
+    }
+
+    .about {
+        .about_card {
+            width: 150px;
+        }
+    }
+
+    .offer {
+        .offer_container {
+            grid-template-rows: max-content 180px;
+        }
+
+        .offer_img {
+            width: 340px;
+        }
+    }
+
+    .logos {
+        .logos_container {
+            gap: 2.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .about {
+        .about_group {
+            width: 350px;
+            justify-self: center;
+        }
+    }
+
+    .featured {
+        .featured_content {
+            grid-template-columns: repeat(2, 228px);
+        }
+    }
+
+    .offer {
+        .offer_container {
+            grid-template-rows: initial;
+            grid-template-columns: 0.5fr;
+            justify-content: center;
+        }
+
+        .offer_img {
+            position: relative;
+            bottom: initial;
+            right: initial;
+        }
+
+        .offer_data {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .nav {
+        height: #{$navHeight + 1.5rem};
+
+        .nav_toggle,
+        .nav_close {
+            display: none;
+        }
+
+        .list {
+            padding-top: 0;
+            flex-direction: row;
+            column-gap: 3rem;
+        }
+
+        .list_itemLink {
+            font-size: $fontNormal;
+            text-transform: initial;
+        }
+    }
+
+    .about {
+        .about_container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about_card {
+            right: -2rem;
+        }
+    }
+
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .shape {
+        &--big {
+            width: 500px;
+            height: 500px;
+        }
+
+        &--small {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    .home {
+        .home_container {
+            padding-top: 2rem;
+        }
+
+        .home_img {
+            width: 380px;
+        }
+
+        .home_car {
+            column-gap: 7rem;
+        }
+
+        .home_carIcon {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .about {
+        .about_container {
+            column-gap: 6rem;
+            align-items: center;
+        }
+
+        .about_group,
+        .about_img {
+            width: 480px;
+        }
+
+        .about_card {
+            padding: 1rem 1.25rem;
+            width: 198px;
+        }
+
+        .about_description {
+            padding-right: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .popular {
+        .popular_container {
+            padding-top: 3rem;
+            width: 875px;
+        }
+
+        .popular_card {
+            margin-bottom: 5rem;
+            width: 258px;
+            border-radius: 1.25rem;
+        }
+
+        .popular_img {
+            margin: 0.75rem 0 1.25rem 2rem;
+            width: 180px;
+        }
+    }
+
+    .features {
+        .features_container {
+            padding: 2rem 0 3rem;
+        }
+
+        .features_img {
+            width: 200px;
+        }
+
+        .features_card {
+            padding: 0.75rem 1.5rem;
+            width: 127px;
+
+            &--1 {
+                left: -1rem;
+            }
+
+            &--2 {
+                right: -2.5rem;
+            }
+
+            &--3 {
+                bottom: 7rem;
+                left: -1rem;
+            }
+        }
+
+        .features_map {
+            top: 11rem;
+            width: 650px;
+        }
+    }
+
+    .featured {
+        .featured_container {
+            padding-bottom: 2.5rem;
+        }
+
+        .featured_filters {
+            margin-bottom: 4.5rem;
+            column-gap: 2rem;
+        }
+
+        .featured_item {
+            width: 52px;
+            height: 52px;
+
+            img {
+                width: 2rem;
+            }
+        }
+
+        .featured_content {
+            grid-template-columns: repeat(3, 248px);
+            gap: 4rem;
+        }
+    }
+
+    .offer {
+        .offer_container {
+            padding-bottom: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+            align-items: center;
+        }
+
+        .offer_data,
+        .offer_title {
+            text-align: initial;
+        }
+
+        .offer_data {
+            margin-bottom: 0;
+        }
+
+        .offer_description {
+            padding-right: 6rem;
+        }
+
+        .offer_img {
+            width: 450px;
+        }
+    }
+
+    .logos {
+        .logos_container {
+            grid-template-columns: repeat(6, max-content);
+        }
+
+        .logos_img {
+            width: 50px;
+        }
+    }
+
+    .footer {
+        .footer_container {
+            grid-template-columns: repeat(4, max-content);
+            justify-content: space-between;
+        }
+
+        .footer_logo {
+            column-gap: 0.5rem;
+
+            i {
+                font-size: 2rem;
+            }
+        }
+
+        .footer_title {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer_links {
+            row-gap: 1.5rem;
+        }
+
+        .footer_socialLink {
+            font-size: 1.5rem;
+        }
+
+        .footer_copy {
+            margin-top: 8rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .scroll_up {
+        right: 3rem;
+    }
+}
